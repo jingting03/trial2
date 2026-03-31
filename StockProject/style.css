@@ -1,0 +1,297 @@
+/* C:\Users\tanji\OneDrive\桌面\StockProject/style.css */
+
+/* 專業金融網站風格調整 */
+
+body {
+    font-family:
+        "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* 更現代的字體 */
+    line-height: 1.7; /* 增加行高，提升閱讀性 */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* 淺灰色背景，專業感 */
+    color: #333;
+}
+
+.container {
+    width: 90%; /* 稍微增加寬度 */
+    max-width: 1200px; /* 設定最大寬度 */
+    margin: 0 auto; /* 居中 */
+    padding: 0 15px; /* 左右留白 */
+    overflow: hidden;
+}
+
+/* 導航欄 */
+header {
+    background-color: #0a1f33; /* 深藍色背景，常見於金融網站 */
+    color: #e0e0e0; /* 淺灰色文字 */
+    padding: 15px 0;
+    border-bottom: 2px solid #007bff; /* 品牌色點綴 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加陰影增加層次 */
+    display: flex;
+    justify-content: center; /* 讓導航內容居中 */
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* 標題和導航菜單兩端對齊 */
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #ffffff; /* 標題顏色更亮 */
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; /* 使用 Flexbox 佈局導航連結 */
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 25px; /* 增加連結間距 */
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease; /* 平滑過渡效果 */
+}
+
+header nav ul li a:hover,
+header nav ul li a.current {
+    /* 模擬當前頁面或懸停效果 */
+    background-color: #007bff; /* 品牌色背景 */
+    color: #ffffff;
+}
+
+/* 英雄區塊 */
+.hero {
+    min-height: 450px;
+    background:
+        linear-gradient(rgba(10, 31, 51, 0.8), rgba(10, 31, 51, 0.8)),
+        url("https://via.placeholder.com/1920x600/0a1f33/ffffff?text=Stock+Analysis+Background"); /* 假設有一個背景圖片，這裡使用一個預設圖片 */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* 內部陰影增加深度 */
+}
+
+.hero h2 {
+    font-size: 3.5em; /* 字體更大 */
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* 文字陰影 */
+}
+
+.hero p {
+    font-size: 1.4em;
+    max-width: 800px; /* 限制段落寬度 */
+    margin: 0 auto;
+    line-height: 1.8;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* 通用區塊樣式 */
+.analysis-section {
+    padding: 50px 0; /* 增加區塊間距 */
+    background-color: #ffffff; /* 白色背景 */
+    border-bottom: 1px solid #e0e0e0; /* 淺灰色分隔線 */
+}
+
+/* 推薦列表區塊的獨立背景 */
+#recommendations {
+    background-color: #f8f9fa; /* 稍微不同的淺色背景，區分區塊 */
+}
+
+.analysis-section h3,
+#recommendations h3 {
+    color: #0a1f33; /* 深藍色標題 */
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.analysis-section p,
+#recommendations p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto; /* 居中並增加下方間距 */
+}
+
+/* 基本面和技術面分析列表 */
+.analysis-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.analysis-section ul li {
+    margin-bottom: 15px;
+    padding-left: 30px; /* 增加左邊距 */
+    position: relative;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.analysis-section ul li::before {
+    content: "•"; /* 使用圓點符號 */
+    color: #007bff; /* 品牌色圓點 */
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -2px; /* 微調位置 */
+}
+
+.analysis-section ul li strong {
+    color: #0a1f33; /* 加粗的文字使用深藍色 */
+}
+
+/* 即時推薦股票列表樣式 */
+#stock-list {
+    list-style: none;
+    padding: 0;
+    display: grid; /* 使用 Grid 佈局 */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    ); /* 響應式網格 */
+    gap: 20px; /* 格子間距 */
+    margin-top: 30px;
+}
+
+#stock-list li {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6; /* 淺灰色邊框 */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 更明顯的陰影 */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease; /* 滑鼠懸停效果 */
+    display: flex;
+    flex-direction: column; /* 讓內容垂直排列 */
+    justify-content: space-between; /* 內容對齊 */
+}
+
+#stock-list li:hover {
+    transform: translateY(-5px); /* 滑鼠懸停時向上移動 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* 懸停時陰影加深 */
+}
+
+#stock-list li h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3; /* 股票名稱使用稍深的藍色 */
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#stock-list li p {
+    font-size: 1em;
+    color: #444;
+    text-align: left; /* 原因左對齊 */
+    margin-bottom: 10px;
+    flex-grow: 1; /* 讓原因區塊佔用可用空間 */
+}
+
+#stock-list li strong {
+    color: #0a1f33; /* 原因標題深藍色 */
+}
+
+#stock-list li em {
+    font-style: normal; /* 移除斜體 */
+    color: #6c757d; /* 輔助文字使用灰色 */
+    font-size: 0.9em;
+    display: block; /* 讓細節文字另起一行 */
+    margin-top: 10px;
+}
+
+/* 頁腳 */
+footer {
+    padding: 30px 0;
+    margin-top: 40px; /* 增加與上方區塊的間距 */
+    color: #c0c0c0; /* 淺灰色文字 */
+    background-color: #0a1f33; /* 與 header 同色系 */
+    text-align: center;
+    font-size: 1.1em;
+    border-top: 2px solid #007bff; /* 品牌色分隔線 */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 響應式設計：在小螢幕上調整 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column; /* 在小螢幕上垂直排列導航連結 */
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.8em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    #stock-list {
+        grid-template-columns: 1fr; /* 單欄佈局 */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+    .hero h2 {
+        font-size: 2.2em;
+    }
+    .analysis-section h3,
+    #recommendations h3 {
+        font-size: 1.8em;
+    }
+    .hero {
+        min-height: 300px;
+    }
+}
